@@ -1,0 +1,205 @@
+/* inert font: */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+}
+
+/* white bg to nav bar */
+.navbar {
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+img { /* 1.1034 */
+  float: right;
+  width: 3.3102%;
+  height: 3%;
+  padding: .2em;
+}
+
+.navbar a.name {
+  float: left;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+/* links inside the nav bar */
+.navbar a.link {
+  float: right;
+  color: #216583;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px 16px 2px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  /*background-color: #ddd;*/
+  color: black;
+  font-weight: bold;
+}
+
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.formfield * {
+    vertical-align: top;
+}
+
+h1 {
+  display: block;
+  font-size: 3em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+
+h2 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.center {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropbtn {
+  background-color: #216583;
+  color: white;
+  padding: 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #1a4f66; cursor: pointer;}
+
+#parent {
+  display: flex;
+}
+
+#home-msg{
+  margin-top: 35px;
+  margin-left: 0px;
+}
+
+#home-header{
+  height: 8.5vh;
+  width: 40vw;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6vh;
+  line-height: 5vh;
+  color: #000000;
+  float:right;
+}
+
+#home-intro {
+  height: 34vh;
+  width: 43vw;
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5vh;
+  line-height: 5vh;
+  color: #000000;
+  float: right;
+}
+#home-img {
+  width: 50%;
+  height: 50%;
+}
+#timer-img {
+  width: 25%;
+  height: 25%;
+  margin-right: 180px;
+  margin-top: 80px;
+}
+
+.middle {
+  margin-top: 150px;
+  justify-content: center;
+}
+
+.mid {
+  margin-top: 140px;
+  justify-content: center;
+}
+
+ table {
+   margin-top: 20px;
+   border: 1px solid silver;
+   width: 500px;
+ }
+
+ th {
+   text-align: left;
+ }
+ 
+ button {
+   margin-left: 15px;
+ }
+
+.button-holder {
+  button {
+  border: 1px solid #333;
+  margin: 0 0 5px 5px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #111;
+  padding: 0.5em;
+  cursor: pointer;
+  @include transition(all .2s ease);
+  }

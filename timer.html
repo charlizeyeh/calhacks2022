@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+  <title>PractiCal</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color: #D9F9F4; text-align:center">
+
+
+  <div class="navbar">
+    <a href="#PractiCal" class="name">PractiCal</a>
+    <a href="/about.html" class="link">about</a>
+    <a href="/timer.html" class="link">timer</a>
+    <a href="/embedpdf.html" class="link">practice</a>
+    <a href="/index.html" class="link">home</a>
+    <img src="graphics/logo.png" alt="PractiCal logo">
+  </div>
+
+  <!--   <div class="row">
+    <span id="home-msg">
+      <img id="timer-img" src="graphics/homepage icon.svg" type="image">
+    </span>
+  </div> -->
+
+  <script>
+    var currentTime = new Date().getTime();
+    var countDownDate = new Date(currentTime + 2 * 60 * 60 * 1000);
+    var x = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("demo").innerHTML = hours + "h "
+        + minutes + "m " + seconds + "s ";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "TIME'S UP";
+      }
+    }, 1000);
+  </script>
+  <h1 id="demo"></h1>
+
+  <embed width="800" height="1000" type="application/pdf" id="embed">
+  <h2>
+    <a href="https://cs61a.org/exam/su22/midterm/61a-su22-midterm_sol.pdf" style="margin-bottom: 20px;">Exam
+      Solution</a>
+  </h2>
+</body>
+
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("link") !== null) {
+    document.getElementById("embed").src = urlParams.get("link");
+    console.log("run")
+  } else {
+    document.getElementById("embed").src = "https://cs61a.org/exam/su22/midterm/61a-su22-midterm.pdf";
+  }
+</script>
+
+</html>
